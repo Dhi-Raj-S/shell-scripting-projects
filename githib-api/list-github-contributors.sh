@@ -43,12 +43,11 @@ function list_users_with_read_access {
 }
 
 # Define a function named 'helper'
-function helper {
-    expected_cmd_args=2
-    
-    if [ $# -ne $expected_cmd_args ]; then 
-        echo "Please execute the script with the required command-line arguments." 
+function helper { 
+    if [ ${#@} -lt 2 ]; then
+        echo "Please execute the script with the required command-line arguments."
         echo "Pass repo owner and repo name."
+        exit 1;
     fi
 }
 
