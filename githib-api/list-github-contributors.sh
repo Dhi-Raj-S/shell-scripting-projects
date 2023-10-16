@@ -1,5 +1,11 @@
 #!/bin/bash
 
+##########################
+# About: Script to get list of users with read access to a github repo using github api's
+# Auther: Dhiraj
+# Input: Export userName, acessToken and repoOwner, repoName
+# ########################
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
