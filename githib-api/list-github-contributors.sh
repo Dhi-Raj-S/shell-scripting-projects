@@ -6,6 +6,10 @@
 # Input: Export userName, acessToken and repoOwner, repoName
 # ########################
 
+
+# Call helper initially 
+ helper
+ 
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -41,6 +45,14 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+
+# Helper Funtion
+function helper{
+expected_cmd_args=2
+if [ $# -ne $expected_cmd_args]; then 
+ echo "Please execute the script with required cmd args" 
+ echo "Pass repo owner and repo name"
+} 
 
 # Main script
 
